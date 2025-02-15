@@ -1,10 +1,10 @@
 import React from 'react'
-import { Button } from "@/components/ui/button"
+import Link from "next/Link"
 
 const Home = () => {
   return (
     <div className='flex min-h-screen items-center justify-center'>
-      <Button variant="destructive"> Click Me </Button>
+      Click &nbsp;<Link href="/documents/123"><span className="text-blue-500 underline">here</span></Link>&nbsp; to go to document id
     </div>
   )
 }
