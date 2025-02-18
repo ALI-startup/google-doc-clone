@@ -8,7 +8,7 @@ interface DocumentIdPageProps {
 
 const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
   const { documentId } = await params;
-
+  console.log(documentId)
   return (
     <div className='min-h-screen bg-[#FAFBFD]'>
       {/* Here I cannot pass the editor as prop to toolbar, so we are using zustand to create the editor store */}
