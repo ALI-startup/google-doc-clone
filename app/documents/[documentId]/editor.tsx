@@ -13,7 +13,10 @@ import ImageResize from "tiptap-extension-resize-image"
 import Underline from '@tiptap/extension-underline'
 
 import { useEditorStore } from '@/store/use-editor-store'
-
+import FontFamily from '@tiptap/extension-font-family'
+import TextStyle from '@tiptap/extension-text-style'
+import { Color } from '@tiptap/extension-color'
+import Highlight from '@tiptap/extension-highlight'
 
 // Better practice is to use Named export for components
 export const Editor = () => {
@@ -66,11 +69,50 @@ export const Editor = () => {
             Image,
             ImageResize,
             Underline,
+            FontFamily,
+            TextStyle,
+            Color,
+            Highlight.configure({
+                multicolor: true
+            })
         ],
         content: `
-        <p>This is a basic example of implementing images. Drag to re-order.</p>
-        <img src="https://placehold.co/800x400" />
-        <img src="https://placehold.co/800x400/6A00F5/white" />
+            <p>This is a sample editor of SamuGen's next update. I am a MS doc-type editor. </p>
+            <p>Feel free to play with me and experiment.</p>
+
+            <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                <th>Task</th>
+                <th>Description</th>
+                <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Font Size</td>
+                <td>Adjust font size options</td>
+                <td>To-Do</td>
+                </tr>
+                <tr>
+                <td>Line Height</td>
+                <td>Add line height adjustments</td>
+                <td>To-Do</td>
+                </tr>
+                <tr>
+                <td>Links</td>
+                <td>Enable hyperlinking</td>
+                <td>To-Do</td>
+                </tr>
+                <tr>
+                <td>Local Image Upload</td>
+                <td>Support for uploading local images</td>
+                <td>To-Do</td>
+                </tr>
+            </tbody>
+            </table>
+            <img src="https://placehold.co/800x400/6A00F5/white" alt="Sample Image Placeholder" />
+
       `,
     })
 

@@ -4,6 +4,10 @@ import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { useEditorStore } from "@/store/use-editor-store";
 import { BoldIcon, Italic, ListTodoIcon, LucideIcon, MessageSquarePlusIcon, PrinterIcon, Redo2Icon, RemoveFormattingIcon, SpellCheckIcon, UnderlineIcon, Undo2Icon } from "lucide-react";
+import FontFamilyButton from "./components/FontFamilyButton";
+import HeadingLevelButton from "./components/HeadingLevelButton";
+import TextColorButton from "./components/TextColorButton";
+import HightlightColorButton from "./components/HighlightColorButton";
 
 interface ToolbarButtonProps {
     onClick?: () => void;
@@ -112,8 +116,10 @@ export const Toolbar = () => {
             ))}
             <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
             {/* TODO: Font Family */}
+            <FontFamilyButton />
             <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
             {/* TODO: Font Heading */}
+            <HeadingLevelButton />
             <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
             {/* TODO: Font Size */}
             <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
@@ -123,11 +129,13 @@ export const Toolbar = () => {
             ))}
 
             {/* TODO: Text Color */}
+            <TextColorButton />
             {/* TODO: Highlight Color */}
+            <HightlightColorButton />
 
             <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
 
-            {/* TODO: Link */}
+            {/* TODO: Image */}
             {/* TODO: Link */}
             {/* TODO: Align */}
             {/* TODO: Line Height */}
