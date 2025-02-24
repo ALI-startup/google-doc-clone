@@ -17,6 +17,9 @@ import FontFamily from '@tiptap/extension-font-family'
 import TextStyle from '@tiptap/extension-text-style'
 import { Color } from '@tiptap/extension-color'
 import Highlight from '@tiptap/extension-highlight'
+import Link from '@tiptap/extension-link'
+import TextAlign from '@tiptap/extension-text-align'
+
 
 // Better practice is to use Named export for components
 export const Editor = () => {
@@ -66,7 +69,9 @@ export const Editor = () => {
             TaskItem.configure({
               nested: true,
             }),
-            Image,
+            Image.configure({
+                inline: true // FIXME Doesn't seem to be working...
+            }),
             ImageResize,
             Underline,
             FontFamily,
@@ -74,6 +79,15 @@ export const Editor = () => {
             Color,
             Highlight.configure({
                 multicolor: true
+            }),
+            Link.configure({
+                openOnClick: false,
+                autolink: true,
+                defaultProtocol: 'https',
+                protocols: ['http', 'https']
+            }),
+            TextAlign.configure({
+                types: ['heading', 'paragraph']
             })
         ],
         content: `
