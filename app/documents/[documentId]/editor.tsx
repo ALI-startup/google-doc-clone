@@ -21,6 +21,10 @@ import Link from '@tiptap/extension-link'
 import TextAlign from '@tiptap/extension-text-align'
 
 
+// Custom extension
+import { FontSize } from '@/extensions/font-size'
+
+
 // Better practice is to use Named export for components
 export const Editor = () => {
 
@@ -88,7 +92,8 @@ export const Editor = () => {
             }),
             TextAlign.configure({
                 types: ['heading', 'paragraph']
-            })
+            }),
+            FontSize
         ],
         content: `
             <p>This is a sample editor of SamuGen's next update. I am a MS doc-type editor. </p>
