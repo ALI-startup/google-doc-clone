@@ -1,12 +1,7 @@
 import { useEditorStore } from '@/store/use-editor-store'
 
-// Be careful that if you import from radix-ui, it will result in transparent background
-// import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu';
-import { DropdownMenuContent, DropdownMenu, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-
 import React, { useState } from 'react'
-import { ListIcon, ListOrderedIcon, MinusIcon, PlusIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { MinusIcon, PlusIcon } from 'lucide-react';
 
 const FontSizeButton = () => {
 
