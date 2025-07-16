@@ -13,6 +13,7 @@ import ImageButton from "./components/ImageButton";
 import AlignButton from "./components/AlignButton";
 import ListButton from "./components/ListButton";
 import FontSizeButton from "./components/FontSizeButton";
+import LineHeightButton from "./components/LineHeightButton";
 
 interface ToolbarButtonProps {
     onClick?: () => void;
@@ -120,13 +121,10 @@ export const Toolbar = () => {
                 <ToolbarButton key={item.label} {...item} />
             ))}
             <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
-            {/* TODO: Font Family */}
             <FontFamilyButton />
             <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
-            {/* TODO: Font Heading */}
             <HeadingLevelButton />
             <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
-            {/* TODO: Font Size */}
             <FontSizeButton />
             <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
 
@@ -134,21 +132,16 @@ export const Toolbar = () => {
                 <ToolbarButton key={item.label} {...item} />
             ))}
 
-            {/* TODO: Text Color */}
             <TextColorButton />
-            {/* TODO: Highlight Color */}
             <HightlightColorButton />
 
             <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
 
-            {/* TODO: Image */}
             <ImageButton />
-            {/* TODO: Link */}
             <LinkButton />
-            {/* TODO: Align */}
             <AlignButton />
             {/* TODO: Line Height */}
-            {/* TODO: List */}
+            <LineHeightButton />
             <ListButton />
             {sections[2].map((item) => (
                 <ToolbarButton key={item.label} {...item} />

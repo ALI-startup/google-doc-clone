@@ -19,7 +19,7 @@ import { Color } from '@tiptap/extension-color'
 import Highlight from '@tiptap/extension-highlight'
 import Link from '@tiptap/extension-link'
 import TextAlign from '@tiptap/extension-text-align'
-
+import { LineHeightExtension  } from '@/extensions/line-height'
 
 // Custom extension
 import { FontSize } from '@/extensions/font-size'
@@ -93,7 +93,11 @@ export const Editor = () => {
             TextAlign.configure({
                 types: ['heading', 'paragraph']
             }),
-            FontSize
+            FontSize,
+            LineHeightExtension.configure({
+                types: ["heading","paragraph"],
+                defaultLineHeight: "normal"
+            })
         ],
         content: `
             <p>This is a sample editor of SamuGen's next update. I am a MS doc-type editor. </p>
