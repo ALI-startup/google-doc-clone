@@ -5,7 +5,7 @@ import { useEditorStore } from '@/store/use-editor-store'
 import { DropdownMenuContent, DropdownMenu, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 
 import React from 'react'
-import { AlignCenterIcon, AlignJustifyIcon, AlignLeftIcon, AlignRightIcon, ListCollapseIcon } from 'lucide-react';
+import { ListCollapseIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const LineHeightButton = () => {
