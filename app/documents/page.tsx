@@ -1,9 +1,28 @@
+import MessagesContainer from '@/components/messages-container'
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable'
 import React from 'react'
 
 const DocumentPage = () => {
   return (
-    <div>
-      Documents Page
+    <div className='h-screen'>
+      <ResizablePanelGroup direction='horizontal'>
+        <ResizablePanel
+          defaultSize={35}
+          minSize={20}
+          className='flex flex-col min-h-0'
+          >
+            <MessagesContainer />
+        </ResizablePanel>
+        <ResizableHandle withHandle />
+        <ResizablePanel
+          defaultSize={65}
+          minSize={50}
+        >
+          Documents Page
+
+        </ResizablePanel>
+
+      </ResizablePanelGroup>
     </div>
   )
 }
